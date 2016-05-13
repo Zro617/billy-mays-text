@@ -38,7 +38,7 @@ function BillyMaysSampleText(name,product,price,phone) {
 		return _any(["if you pay ","with "])+_any(["processing","shipping"])+" & handling";
 	}
 	function free() {
-		return _any(["free","absolutely free","free of charge"]);
+		return _any(["free","absolutely free","free of charge","at no additional cost","at no extra charge"]);
 	}
 	function but_wait_theres_more() {
 		return _any(["but wait, there's more","I'm not done yet","and that's not all","it gets even better","hold it right there"]);
@@ -62,7 +62,7 @@ function BillyMaysSampleText(name,product,price,phone) {
 	if (_chance(30)) {
 		mult = _randint(2,10);
 		output += but_wait_theres_more() + _punct();
-		output += "if you " + _any(["","pick up the phone and ","give us a "]) + "call right now, "+ _any(["you'll get","you'll receive","we'll give you","we'll offer you "]) + mult + " times as much {product}" + ", " + free() + "! ";
+		output += "if you " + _any(["","pick up the phone and ","give us a "]) + "call right now, "+ _any(["you'll get","you'll receive ","we'll give you","we'll offer you "]) + mult + " times as much {product}" + ", " + free() + "! ";
 	}
 	if (_chance(60)) {
 		extra = _extraproduct();
